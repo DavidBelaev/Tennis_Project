@@ -10,6 +10,10 @@ function displayTime() {
 	var time = "";
 	var times = [hour, minute, second];
 	for(var i = 0; i < 3; i++) {
+		if( times[i] < 10 ) {
+			time += "0";
+		}
+		
 		time += String( times[i] );
 		
 		if(i !== 2) {
