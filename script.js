@@ -21,6 +21,6 @@ function displayTime() {
 		}
 	}
 	time += "</br>"
-	time ++ "aviv is better then david"
+	time += "aviv is better then david"
 	document.getElementById("time").innerHTML = time;
 }
