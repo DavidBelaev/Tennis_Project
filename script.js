@@ -1,4 +1,7 @@
+
+setInterval(displayTime, 1000)
+var a = 0;
 function displayTime() {
-	//This function will display the time
-	//Using the 'time' div
+	a++;
+	document.getElementById("time").innerHTML = a;
 }
