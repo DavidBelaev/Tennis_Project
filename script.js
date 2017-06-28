@@ -1,26 +1,24 @@
-setInterval(displayTime, 1000)
-
+var a = prompt("how many beers did u buy?")
+displayTime();
 function displayTime() {
-	var date = new Date();
-	
-	var hour = date.getHours();
-	var minute = date.getMinutes();
-	var second = date.getSeconds();
-	
-	var time = "";
-	var times = [hour, minute, second];
-	for(var i = 0; i < 3; i++) {
-		if( times[i] < 10 ) {
-			time += "0";
+	var time = ""
+	var b = a;
+	for(var i = a; a>-1; a--){
+		if( a != 0){
+		time = a + "bottles of beer on the wall, "+ a +" bottles of beer. "+
+		"Take one down and pass it around, " + (a-1) +" bottles of beer on the wall."
+		}else{
+		time = "No more bottles of beer on the wall, no more bottles of beer. " +
+		"Go to the store and buy some more, "+b+ " bottles of beer on the wall.";
 		}
-		
-		time += String( times[i] );
-		
-		if(i !== 2) {
-			time += " : ";
-		}
+		document.getElementById("time").innerHTML = time;
+		wait(1000);
 	}
-	time += "</br>"
-	time += "aviv is better than david"
-	document.getElementById("time").innerHTML = time;
+}
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
 }
